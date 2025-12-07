@@ -1,56 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Now - Nova Academy</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { background-color: #020b33; color: #fff; font-family: 'Poppins', sans-serif; }
-        .neon-text { text-shadow: 0 0 10px #3a86ff, 0 0 20px #3a86ff; font-weight: 600; }
-        .card { background: #061046; border: 1px solid #1f3fff77; box-shadow: 0 0 20px rgba(0, 102, 255, 0.3); border-radius: 15px; }
-        .btn-success { background: #28a745; border: none; color: #fff; box-shadow: 0 0 10px #28a745, 0 0 20px #28a745; }
-        input, select { background: #0b154d; color: #fff; border: 1px solid #1f3fff77; }
-        input::placeholder, select::placeholder { color: #ccc; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Nova Academy</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background-color: #020b33;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+    }
+    .neon-text {
+        text-shadow: 0 0 10px #3a86ff, 0 0 20px #3a86ff;
+        font-weight: 600;
+    }
+    .card {
+        background: #061046;
+        border: 1px solid #1f3fff77;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,102,255,0.3);
+        padding: 30px;
+    }
+    .btn-neon {
+        background: #0d6efd;
+        border: none;
+        box-shadow: 0 0 10px #0d6efd, 0 0 20px #0d6efd;
+        color: #fff;
+    }
+    a.nav-link { color: #3a86ff; }
+    a.nav-link:hover { color: #0ff; text-decoration: underline; }
+</style>
 </head>
 <body>
-    <div class="container py-5">
-        <h2 class="text-center neon-text mb-4">Register Now</h2>
-        <div class="card p-4 mx-auto" style="max-width: 600px;">
-            <form id="registerForm">
-                <div class="mb-3">
-                    <label class="form-label">Full Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="Enter your full name" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Phone</label>
-                    <input type="tel" class="form-control" name="phone" placeholder="Enter your phone number" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Select Workshop</label>
-                    <select class="form-select" name="workshop" required>
-                        <option value="">-- Choose Workshop --</option>
-                        <option>AI in Mathematical Modeling</option>
-                        <option>Python for Data Science</option>
-                        <option>Machine Learning Basics</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-success w-100">Submit Registration</button>
-            </form>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold neon-text fs-3" href="index.html">NOVA ACADEMY</a>
+        <div class="navbar-nav ms-auto fs-5 d-flex flex-row">
+            <a class="nav-link mx-2" href="index.html">Home</a>
+            <a class="nav-link mx-2" href="#workshops">Workshops</a>
+            <a class="nav-link mx-2" href="register.html">Register</a>
+            <a class="nav-link mx-2" href="enquire.html">Enquire</a>
         </div>
     </div>
+</nav>
 
-    <script>
-        document.getElementById("registerForm").addEventListener("submit", function(e){
-            e.preventDefault();
-            alert("Thank you! Your registration has been submitted.");
-            this.reset();
-        });
-    </script>
+<div class="container py-5" style="margin-top:100px;">
+    <h2 class="text-center neon-text mb-4">Workshop Registration</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email ID</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="workshop" class="form-label">Select Workshop</label>
+                        <select class="form-select" id="workshop" required>
+                            <option value="">-- Select Workshop --</option>
+                            <option value="AI in Mathematical Modeling">AI in Mathematical Modeling</option>
+                            <option value="Python for Data Science">Python for Data Science</option>
+                            <option value="Machine Learning Basics">Machine Learning Basics</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-neon w-100">Submit Registration</button>
+                </form>
+                <div id="registerMsg" class="mt-3 text-center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center py-4" style="background:#000c2e; color:#3a86ff;">
+    <p>Follow Us</p>
+    <div>
+        <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="mx-2"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="mx-2"><i class="bi bi-youtube"></i></a>
+    </div>
+    <p class="mt-3">© 2025 Nova Academy. All Rights Reserved.</p>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/919876543210" class="position-fixed" style="bottom:20px; right:20px; z-index:9999;">
+  <img src="https://i.imgur.com/2pQeI5H.png" width="65" alt="WhatsApp" style="filter: drop-shadow(0 0 8px #00ffea);">
+</a>
+
+<script>
+document.getElementById('registerForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('registerMsg').innerHTML = "<span style='color:#0ff;'>✅ Registration Submitted Successfully!</span>";
+    this.reset();
+});
+</script>
+
 </body>
 </html>
