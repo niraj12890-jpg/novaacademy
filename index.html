@@ -100,57 +100,119 @@
 
     <!-- WORKSHOPS SECTION -->
     <section class="container py-5" id="workshops">
-        <h2 class="text-center neon-text mb-5">Upcoming Online Workshops</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card p-3">
-                    <h4 class="fw-bold">AI in Mathematical Modeling</h4>
-                    <p>Learn how Artificial Intelligence is transforming advanced mathematical simulations.</p>
-                    <ul>
-                        <li>Duration: 2 Days</li>
-                        <li>Date: 15 Jan 2026</li>
-                        <li>Fee: ₹499</li>
-                    </ul>
-                    <div class="d-flex gap-2 mt-auto">
-   <button class="btn btn-neon flex-fill" onclick="openPopup('enquirePopup')">Enquire Now</button>
-    <button class="btn btn-success flex-fill" onclick="openPopup('registerPopup')">Register Now</button>
+    <h2 class="text-center neon-text mb-5">Upcoming Online Workshops</h2>
+    <div class="row g-4">
 
-</div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3">
-                    <h4 class="fw-bold">Python for Data Science</h4>
-                    <p>Master the Python programming essentials to build real-world data projects.</p>
-                    <ul>
-                        <li>Duration: 5 Days</li>
-                        <li>Date: 20 Jan 2026</li>
-                        <li>Fee: ₹799</li>
-                    </ul>
-                    <div class="d-flex gap-2 mt-auto">
-    <button class="btn btn-neon flex-fill" onclick="openPopup('enquirePopup')">Enquire Now</button>
-    <button class="btn btn-success flex-fill" onclick="openPopup('registerPopup')">Register Now</button>
+        <!-- XPS WORKSHOP -->
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h4 class="fw-bold">X-ray Photoelectron Spectroscopy (XPS) Data Analysis</h4>
+                <p>Comprehensive understanding + hands-on XPS data analysis.</p>
+                <ul>
+                    <li>Duration: 1 Week</li>
+                    <li>Mode: Online</li>
+                </ul>
+                <button class="btn btn-primary w-100 mb-2" onclick="openDetails('xps')">View More Info</button>
 
-</div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3">
-                    <h4 class="fw-bold">Machine Learning Basics</h4>
-                    <p>Understand ML algorithms and build your first predictive model.</p>
-                    <ul>
-                        <li>Duration: 7 Days</li>
-                        <li>Date: 25 Jan 2026</li>
-                        <li>Fee: ₹999</li>
-                    </ul>
-                    <div class="d-flex gap-2 mt-auto">
-    <button class="btn btn-neon flex-fill">Enquire Now</button>
-    <button class="btn btn-success flex-fill">Register Now</button>
-</div>
+                <div class="d-flex gap-2 mt-auto">
+                    <button class="btn btn-neon flex-fill" onclick="openPopup('enquirePopup')">Enquire Now</button>
+                    <button class="btn btn-success flex-fill" onclick="openPopup('registerPopup')">Register Now</button>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- ELECTROCHEMICAL WORKSHOP -->
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h4 class="fw-bold">Electrochemical Data Analysis Workshop</h4>
+                <p>Learn EIS, CV, LSV, GCD & Nyquist for batteries & catalysis.</p>
+                <ul>
+                    <li>Duration: 1–2 Weeks</li>
+                    <li>Mode: Online</li>
+                </ul>
+                <button class="btn btn-primary w-100 mb-2" onclick="openDetails('electro')">View More Info</button>
+
+                <div class="d-flex gap-2 mt-auto">
+                    <button class="btn btn-neon flex-fill" onclick="openPopup('enquirePopup')">Enquire Now</button>
+                    <button class="btn btn-success flex-fill" onclick="openPopup('registerPopup')">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ORIGIN PRO WORKSHOP -->
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h4 class="fw-bold">OriginPro Data Analysis & Graphing Workshop</h4>
+                <p>Peak fitting, graphing, batch processing & scientific plotting.</p>
+                <ul>
+                    <li>Duration: 1 Week</li>
+                    <li>Mode: Online</li>
+                </ul>
+                <button class="btn btn-primary w-100 mb-2" onclick="openDetails('origin')">View More Info</button>
+
+                <div class="d-flex gap-2 mt-auto">
+                    <button class="btn btn-neon flex-fill" onclick="openPopup('enquirePopup')">Enquire Now</button>
+                    <button class="btn btn-success flex-fill" onclick="openPopup('registerPopup')">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- XRD WORKSHOP -->
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h4 class="fw-bold">X-ray Diffraction (XRD) Data Analysis</h4>
+                <p>Crystal structure, refinement, indexing & XRD interpretation.</p>
+                <ul>
+                    <li>Duration: 1 Week</li>
+                    <li>Mode: Online</li>
+                </ul>
+                <button class="btn btn-primary w-100 mb-2" onclick="openDetails('xrd')">View More Info</button>
+
+                <div class="d-flex gap-2 mt-auto">
+                    <button class="btn btn-neon flex-fill" onclick="openPopup('enquirePopup')">Enquire Now</button>
+                    <button class="btn btn-success flex-fill" onclick="openPopup('registerPopup')">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHEMDRAW WORKSHOP -->
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h4 class="fw-bold">ChemDraw Hands-on Training</h4>
+                <p>Chemical structures, reactions, stereochemistry & diagrams.</p>
+                <ul>
+                    <li>Duration: 1 Week</li>
+                    <li>Mode: Online</li>
+                </ul>
+                <button class="btn btn-primary w-100 mb-2" onclick="openDetails('chemdraw')">View More Info</button>
+
+                <div class="d-flex gap-2 mt-auto">
+                    <button class="btn btn-neon flex-fill" onclick="openPopup('enquirePopup')">Enquire Now</button>
+                    <button class="btn btn-success flex-fill" onclick="openPopup('registerPopup')">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DWSIM WORKSHOP -->
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h4 class="fw-bold">Chemical Engineering Simulation Using DWSIM</h4>
+                <p>Reactors, distillation, thermodynamics & process simulation.</p>
+                <ul>
+                    <li>Duration: 1 Week</li>
+                    <li>Mode: Online</li>
+                </ul>
+                <button class="btn btn-primary w-100 mb-2" onclick="openDetails('dwsim')">View More Info</button>
+
+                <div class="d-flex gap-2 mt-auto">
+                    <button class="btn btn-neon flex-fill" onclick="openPopup('enquirePopup')">Enquire Now</button>
+                    <button class="btn btn-success flex-fill" onclick="openPopup('registerPopup')">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 <!-- PAST WORKSHOPS & TRAININGS SECTION -->
 <section class="container py-5" id="past-workshops">
@@ -538,6 +600,35 @@ function openPopup(id) {
 }
 function closePopup(id) {
   document.getElementById(id).style.display = "none";
+}
+</script>
+<!-- WORKSHOP INFO POPUP -->
+<div class="popup-overlay" id="workshopInfo" style="display:none;">
+  <div class="popup-box">
+    <h3 id="workshopTitle"></h3>
+    <p id="workshopDesc"></p>
+    <button class="btn btn-danger w-100 mt-3" onclick="closeDetails()">Close</button>
+  </div>
+</div>
+
+<script>
+const workshopData = {
+  xps: "Basic physics of photoemission, instrumentation, peak fitting, survey scans, chemical state analysis.",
+  electro: "CV, EIS, LSV, GCD, Tafel plots, battery & supercapacitor case studies.",
+  origin: "Graphing, peak analysis, curve fitting, batch processing, multi-layer plots.",
+  xrd: "Phase identification, Rietveld refinement, structure solution, peak indexing.",
+  chemdraw: "Drawing chemical structures, reactions, stereochemistry, templates, exporting HD diagrams.",
+  dwsim: "Thermodynamics, reactors, distillation, heat exchangers, separation processes, flowsheeting."
+};
+
+function openDetails(key){
+  document.getElementById('workshopInfo').style.display = "flex";
+  document.getElementById('workshopTitle').innerText = key.toUpperCase() + " WORKSHOP";
+  document.getElementById('workshopDesc').innerText = workshopData[key];
+}
+
+function closeDetails(){
+  document.getElementById('workshopInfo').style.display = "none";
 }
 </script>
 
