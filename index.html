@@ -603,34 +603,131 @@ function closePopup(id) {
 }
 </script>
 <!-- WORKSHOP INFO POPUP -->
+<!-- WORKSHOP INFO POPUP -->
 <div class="popup-overlay" id="workshopInfo" style="display:none;">
-  <div class="popup-box">
-    <h3 id="workshopTitle"></h3>
-    <p id="workshopDesc"></p>
+  <div class="popup-box" style="max-height:80vh; overflow-y:auto;">
+    <h3 id="workshopTitle" class="neon-text"></h3>
+    <p id="workshopDesc" style="white-space:pre-line;"></p>
     <button class="btn btn-danger w-100 mt-3" onclick="closeDetails()">Close</button>
   </div>
 </div>
 
 <script>
+// FULL DETAILED WORKSHOP CONTENT
 const workshopData = {
-  xps: "Basic physics of photoemission, instrumentation, peak fitting, survey scans, chemical state analysis.",
-  electro: "CV, EIS, LSV, GCD, Tafel plots, battery & supercapacitor case studies.",
-  origin: "Graphing, peak analysis, curve fitting, batch processing, multi-layer plots.",
-  xrd: "Phase identification, Rietveld refinement, structure solution, peak indexing.",
-  chemdraw: "Drawing chemical structures, reactions, stereochemistry, templates, exporting HD diagrams.",
-  dwsim: "Thermodynamics, reactors, distillation, heat exchangers, separation processes, flowsheeting."
+  
+  xps: `About the Workshop
+
+This Online Workshop on XPS Data Analysis is designed to offer a comprehensive understanding and practical exposure to X-ray Photoelectron Spectroscopy (XPS), one of the most powerful and widely used surface analytical techniques in materials science.
+
+Tailored for students, researchers, faculty members, and professionals, the workshop aims to strengthen participants’ knowledge of:
+
+• XPS fundamentals  
+• Instrumentation  
+• Data acquisition  
+• Advanced interpretation skills  
+
+Participants will understand:
+
+• The basic physics of photoemission  
+• Key components of an XPS instrument  
+• Survey and high-resolution scan analysis  
+• Peak fitting and background correction  
+• Elemental identification and chemical state analysis  
+
+Each module combines theory with hands-on demonstrations using real XPS datasets. A live interactive session allows attendees to analyze their own data or sample data with expert guidance.`,
+
+  electro: `About the Workshop
+
+This comprehensive online workshop covers Electrochemical Data Analysis with applications in batteries, supercapacitors, and electrocatalysis.
+
+Participants will learn:
+
+• Fundamental & advanced electrochemical concepts  
+• CV (Cyclic Voltammetry)  
+• EIS (Electrochemical Impedance Spectroscopy)  
+• LSV, Tafel, Nyquist, GCD  
+• Data interpretation techniques  
+• Case studies from real research systems  
+
+Hands-on sessions with real datasets ensure complete practical understanding.`,
+
+  origin: `About the Workshop
+
+A complete hands-on training program designed to teach scientific graphing & data analysis using OriginPro.
+
+Participants will learn:
+
+• Importing, managing & organizing datasets  
+• Creating publication-quality graphs  
+• Multi-layer figures & templates  
+• Peak analysis & curve fitting  
+• Batch processing for multiple datasets  
+• Exporting high-resolution images  
+
+Perfect for beginners and researchers.`,
+
+  xrd: `About the Workshop
+
+A beginner–friendly workshop focused on X-ray Diffraction (XRD) data interpretation and crystallography.
+
+You will learn:
+
+• Fundamentals of XRD  
+• Phase identification  
+• Crystal structure analysis  
+• Rietveld refinement  
+• Data preprocessing & peak indexing  
+• Interpretation of refinement outputs  
+
+Includes hands-on practice with real crystallographic datasets.`,
+
+  chemdraw: `About the Workshop
+
+A complete hands-on training on ChemDraw for chemical structure drawing and research visualization.
+
+Participants will learn:
+
+• ChemDraw interface & tools  
+• Drawing molecules, reactions & mechanisms  
+• Stereochemistry  
+• Templates & structure editing  
+• Exporting high-quality diagrams  
+• Data visualization for research papers  
+
+Suitable for beginners and researchers.`,
+
+  dwsim: `About the Workshop
+
+A practical workshop on chemical process simulation using DWSIM (Open-source simulator).
+
+Participants will learn:
+
+• DWSIM interface  
+• Creating process flowsheets  
+• Thermodynamic property analysis  
+• Reactors, distillation, separators  
+• Heat exchanger simulations  
+• Sensitivity analysis  
+• Generating reports & case studies  
+
+Ideal for chemical engineers & researchers.`
+
 };
 
+// SHOW POPUP
 function openDetails(key){
   document.getElementById('workshopInfo').style.display = "flex";
   document.getElementById('workshopTitle').innerText = key.toUpperCase() + " WORKSHOP";
   document.getElementById('workshopDesc').innerText = workshopData[key];
 }
 
+// CLOSE POPUP
 function closeDetails(){
   document.getElementById('workshopInfo').style.display = "none";
 }
 </script>
+
 
 </body>
 </html>
