@@ -697,6 +697,13 @@ Practical training on DWSIM: process flowsheets, thermodynamic property analysis
       }
       updateCounter();
     });
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape"){
+    closeDetails();
+    closePopup('enquirePopup');
+    closePopup('registerPopup');
+  }
+});
   </script>
 </body>
 </html>
