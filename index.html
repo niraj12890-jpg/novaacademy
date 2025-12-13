@@ -136,7 +136,21 @@
         <ul class="navbar-nav ms-auto fs-6 d-flex align-items-center">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#workshops">Workshop</a></li>
+          <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#workshops" role="button" data-bs-toggle="dropdown">
+    Workshops
+  </a>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item" href="#workshops">All Upcoming Workshops</a></li>
+    <li><a class="dropdown-item" href="#" onclick="openDetails('xps')">XPS Data Analysis</a></li>
+    <li><a class="dropdown-item" href="#" onclick="openDetails('electro')">Electrochemical Analysis</a></li>
+    <li><a class="dropdown-item" href="#" onclick="openDetails('origin')">OriginPro Training</a></li>
+    <li><a class="dropdown-item" href="#" onclick="openDetails('xrd')">XRD Analysis</a></li>
+    <li><a class="dropdown-item" href="#" onclick="openDetails('chemdraw')">ChemDraw</a></li>
+    <li><a class="dropdown-item" href="#" onclick="openDetails('dwsim')">DWSIM Simulation</a></li>
+  </ul>
+</li>
+
           <li class="nav-item"><a class="nav-link" href="#training">Trainers</a></li>
           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
@@ -561,11 +575,11 @@
 
     // ---------- Workshop detailed data (images + full text) ----------
     const workshopData = {
-      xps: {
-        title: "XPS Data Analysis Workshop",
-        img: "XPSIMAGE.png",
-        pdf: "#",
-        desc: `About the Workshop
+  xps: {
+    title: "XPS Data Analysis Workshop",
+    img: "XPSIMAGE.png",
+    pdf: "#",
+    desc: `About the Workshop
 
 This Online Workshop on XPS Data Analysis is designed to offer a comprehensive understanding and practical exposure to X-ray Photoelectron Spectroscopy (XPS), one of the most powerful and widely used surface analytical techniques in materials science.
 
@@ -580,11 +594,11 @@ Through a carefully structured set of sessions, participants will understand:
 
 Each module combines theoretical explanations with live practical demonstrations, ensuring participants gain hands-on experience with real XPS datasets. A dedicated interactive session will allow attendees to analyze their own data or provided examples under the supervision of experts.`
       },
-      electro: {
-        title: "Electrochemical Data Analysis Workshop",
-        img: "images/w2.png",
-        pdf: "#",
-        desc: `About the Workshop
+ electro: {
+    title: "Electrochemical Data Analysis Workshop",
+    img: "images/w2.png",
+    pdf: "#",
+    desc: `About the Workshop
 
 This workshop provides a comprehensive introduction to Electrochemical Data Analysis for professionals and researchers working with batteries, supercapacitors, and electrocatalysis. Participants will learn key principles, data interpretation methods, and practical applications essential for modern energy storage and conversion research.
 
@@ -597,10 +611,10 @@ Through a carefully structured set of sessions, participants will understand:
 Hands-on sessions with real datasets ensure practical understanding.`
       },
       origin: {
-        title: "OriginPro Graphing & Data Analysis Workshop",
-        img: images/w2.png",
-        pdf: "#",
-        desc: `About the Workshop
+    title: "OriginPro Graphing & Data Analysis Workshop",
+    img: "images/w3.png",   // ✅ FIXED
+    pdf: "#",
+    desc: `About the Workshop
 
 This workshop is designed to equip participants with practical, hands-on skills in OriginPro for scientific data analysis and graphing.
 
@@ -612,27 +626,27 @@ Participants will learn:
 
 Suitable for both beginners and advanced users.`
       },
-      xrd: {
-        title: "XRD Data Analysis Workshop",
-        img: "images/w3.png",
-        pdf: "#",
-        desc: `About the Workshop
+xrd: {
+    title: "XRD Data Analysis Workshop",
+    img: "images/w4.png",
+    pdf: "#",
+    desc: `About the Workshop
 
 This workshop introduces participants to X-ray Diffraction (XRD) data analysis: phase identification, Rietveld refinement, peak indexing, and crystal structure interpretation with practical sessions using real datasets.`
       },
       chemdraw: {
-        title: "ChemDraw Hands-on Workshop",
-        img: "images/w2.png",
-        pdf: "#",
-        desc: `About the Workshop
+    title: "ChemDraw Hands-on Workshop",
+    img: "images/w5.png",
+    pdf: "#",
+    desc: `About the Workshop
 
 Hands-on training in ChemDraw interface and tools, drawing chemical structures, reactions, stereochemistry, templates, and exporting publication-ready diagrams.`
       },
       dwsim: {
-        title: "DWSIM Chemical Simulation Workshop",
-        img: "images/w4.png",
-        pdf: "#",
-        desc: `About the Workshop
+    title: "DWSIM Chemical Simulation Workshop",
+    img: "images/w6.png",
+    pdf: "#",
+    desc: `About the Workshop
 
 Practical training on DWSIM: process flowsheets, thermodynamic property analysis, unit operation modeling (reactors, distillation, heat exchangers), and case-study simulations.`
       }
