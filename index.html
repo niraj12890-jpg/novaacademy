@@ -483,23 +483,66 @@
   </div>
 
   <div id="registerPopup" class="popup-overlay">
-    <div class="popup-box" style="max-width:560px;">
-      <h2 class="neon-text mb-3">Register Form</h2>
-      <label class="form-label">Full Name</label>
-      <input type="text" class="form-control mb-2" placeholder="Enter your name">
-      <label class="form-label">Email</label>
-      <input type="email" class="form-control mb-2" placeholder="Enter your email">
-      <label class="form-label">Mobile Number</label>
-      <input type="text" class="form-control mb-2" placeholder="Enter mobile number">
-      <label class="form-label">Workshop</label>
-      <select class="form-control mb-3">
-        <option>AI in Mathematical Modeling</option>
-        <option>Python for Data Science</option>
-        <option>Machine Learning Basics</option>
-      </select>
-      <button class="btn btn-success w-100 mb-3">Submit Registration</button>
-      <button class="btn btn-danger w-100" onclick="closePopup('registerPopup')">Back</button>
+  <div class="popup-box" style="max-width:560px;">
+    <h2 class="neon-text mb-3">Register & Pay</h2>
+
+    <!-- Registration Fields -->
+    <label class="form-label">Full Name</label>
+    <input type="text" class="form-control mb-2" placeholder="Enter your name">
+
+    <label class="form-label">Email</label>
+    <input type="email" class="form-control mb-2" placeholder="Enter your email">
+
+    <label class="form-label">Mobile Number</label>
+    <input type="text" class="form-control mb-2" placeholder="Enter mobile number">
+
+    <label class="form-label">Workshop</label>
+    <select class="form-control mb-3">
+      <option>XPS Data Analysis</option>
+      <option>Electrochemical Data Analysis</option>
+      <option>OriginPro Training</option>
+      <option>XRD Analysis</option>
+      <option>ChemDraw Workshop</option>
+      <option>DWSIM Simulation</option>
+    </select>
+
+    <!-- PAYMENT SECTION -->
+    <div class="text-center border rounded p-3 mb-3" style="border-color:#3a86ff;">
+      <h5 class="neon-text mb-2">Pay Using UPI (QR Code)</h5>
+
+      <!-- QR IMAGE (you will replace src) -->
+      <img src="images/qr.png"
+           alt="UPI QR Code"
+           class="img-fluid mb-2"
+           style="max-width:220px;">
+
+      <!-- Account Details -->
+      <p class="mb-0"><strong>Account Holder:</strong> NOVA ACADEMY</p>
+      <p class="mb-0"><strong>UPI ID:</strong> novaacademy@upi</p>
+      <p class="mb-2"><strong>Bank:</strong> State Bank of India</p>
+
+      <small class="text-warning">
+        Payment karne ke baad niche UTR / Transaction ID enter karein
+      </small>
     </div>
+
+    <!-- UTR -->
+    <label class="form-label">UTR / Transaction ID</label>
+    <input type="text"
+           class="form-control mb-3"
+           placeholder="Enter UPI Transaction ID">
+
+    <button class="btn btn-success w-100 mb-2">
+      Submit Registration & Payment
+    </button>
+
+    <button class="btn btn-danger w-100"
+            onclick="closePopup('registerPopup')">
+      Cancel
+    </button>
+  </div>
+</div>
+
   </div>
 
   <!-- Workshop Info popup (full-screen, scrollable) -->
