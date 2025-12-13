@@ -120,6 +120,23 @@
 
     /* footer neon border */
     footer { background:#000c2e; color:var(--neon); }
+    /* popup animation */
+.popup-overlay {
+  animation: fadeIn 0.3s ease;
+}
+.popup-box {
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
   </style>
 </head>
 <body>
@@ -538,10 +555,7 @@
   </section>
 
   <!-- floating whatsapp -->
-  <a href="https://wa.me/919876543210" class="position-fixed" style="bottom:20px; right:20px; z-index:9999;">
-    <img src="https://i.imgur.com/2pQeI5H.png" width="65" alt="WhatsApp" style="filter: drop-shadow(0 0 8px #00ffea);">
-  </a>
-
+ 
   <!-- sticky enquire bar -->
   <div class="position-fixed w-100 py-2 text-center" style="bottom:0; left:0; background:#001a66; color:var(--neon); font-size:20px; font-weight:600; box-shadow:0 0 15px var(--neon); z-index:9998;">
     📢 Need Help? <a href="#contact" class="btn btn-neon ms-3 px-4 py-1">Enquire Now</a>
@@ -704,6 +718,26 @@ document.addEventListener("keydown", function(e){
     closePopup('registerPopup');
   }
 });
+    const msg =
+  `Hello Nova Academy 👋%0A` +
+  `मैं *${data.title}* workshop में interested हूँ।%0A` +
+  `Please details, fees & schedule share करें।`;
+document.getElementById("whatsappLink").href =
+  `https://wa.me/919598183089?text=${msg}`;
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape"){
+    closeDetails && closeDetails();
+  }
+});
+
   </script>
+    <!-- Floating WhatsApp Button -->
+<a id="whatsappLink"
+   href="https://wa.me/919598183089"
+   target="_blank"
+   style="position:fixed;bottom:20px;right:20px;z-index:9999;">
+  <img src="images/whatsapp.png" width="55" alt="WhatsApp">
+</a>
+
 </body>
 </html>
