@@ -678,6 +678,15 @@ Practical training on DWSIM: process flowsheets, thermodynamic property analysis
       // prevent background scroll while popup open
       document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
+        // WhatsApp auto message (Nova Academy)
+  const msg =
+    `Hello Nova Academy 👋%0A` +
+    `मैं *${data.title}* workshop में interested हूँ।%0A` +
+    `Please details, fees & schedule share करें।`;
+
+  document.getElementById("whatsappLink").href =
+    `https://wa.me/919598183089?text=${msg}`;
+
     }
 
     function closeDetails(){
@@ -718,18 +727,6 @@ document.addEventListener("keydown", function(e){
     closePopup('registerPopup');
   }
 });
-    const msg =
-  `Hello Nova Academy 👋%0A` +
-  `मैं *${data.title}* workshop में interested हूँ।%0A` +
-  `Please details, fees & schedule share करें।`;
-document.getElementById("whatsappLink").href =
-  `https://wa.me/919598183089?text=${msg}`;
-document.addEventListener("keydown", function(e){
-  if(e.key === "Escape"){
-    closeDetails && closeDetails();
-  }
-});
-
   </script>
     <!-- Floating WhatsApp Button -->
 <a id="whatsappLink"
